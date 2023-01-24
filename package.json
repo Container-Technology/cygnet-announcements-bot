@@ -8,13 +8,16 @@
   "scripts": {
     "build": "tsc",
     "build:changelog": "npx @discordx/changelog --root=src",
-    "dev": "ts-node-esm src/main.ts",
-    "start": "node build/main.js",
-    "watch": "nodemon --exec ts-node-esm src/main.ts"
+    "dev": "env $(cat .env) ts-node-esm src/main.ts",
+    "start": "env $(cat .env) node build/main.js",
+    "watch": "env $(cat .env) nodemon --exec ts-node-esm src/main.ts"
   },
   "dependencies": {
     "@discordx/importer": "^1.1.10",
     "@discordx/pagination": "^3.3.1",
+    "@sanity/client": "^4.0.1",
+    "date-fns": "^2.29.3",
+    "date-fns-tz": "^1.3.7",
     "discord.js": "^14.6.0",
     "discordx": "^11.4.0"
   },
