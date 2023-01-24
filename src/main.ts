@@ -103,8 +103,6 @@ bot.once('ready', async () => {
         recipientChannels.add(channel);
       }
 
-      console.log(announcement)
-
       // Compose message
       const message = new AnnouncementMessage({ 
         link: announcement.link,

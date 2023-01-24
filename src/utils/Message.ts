@@ -13,13 +13,10 @@ export default class Message {
     }: {
         [key: string]: string
     }) {
-        console.log(title)
-        console.log(description)
-
         const embed = new EmbedBuilder({
             title,
             description,
-            color: parseInt(color.replace(/^#/, ''), 16), // Parse hex color,
+            color: parseInt(color.replace(/^#/, ''), 16), // Parse hex color
             url,
             author: {
                 name: `Cygnet: ${instanceTitle}`,
